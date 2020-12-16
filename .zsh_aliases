@@ -8,11 +8,26 @@ alias ze='nvim ~/.zsh_exports'
 ### Neovim Config
 alias nc='nvim ~/.vimrc'
 
+# Dotfiles management w/ Git bare repo
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias da='dotfiles add'
+alias dau='dotfiles add -u'
+alias dcb='dotfiles checkout -b'
+alias dcm='dotfiles commit -m'
+alias dco='dotfiles checkout'
+alias ddf='dotfiles diff'
+alias dp='dotfiles push'
+alias ds='dotfiles status'
+alias dss='dotfiles status -s'
+alias dl='dotfiles pull'
+alias dlog='dotfiles log --oneline --decorate --graph'
+alias drh='dotfiles reset'
+alias drhh='dotfiles reset --hard'
+alias dsta='dotfiles stash'
+alias dstp='dotfiles stash pop'
+
 # Always use nvim over vi
 alias vi=nvim
-
-# Use 'dotfiles' to manage dotfiles git
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Use Python3 vs Python2 when invoking 'python'
 alias python="python3"

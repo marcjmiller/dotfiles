@@ -1,0 +1,18 @@
+# Easy aliases for configuring things
+### ZSH Config
+alias reload='source ~/.zshrc'
+alias zc='nvim ~/.zshrc'
+alias za='nvim ~/.zsh_aliases'
+alias ze='nvim ~/.zsh_exports'
+
+### Neovim Config
+alias nc='nvim ~/.vimrc'
+
+# Always use nvim over vi
+alias vi=nvim
+
+# Use 'dotfiles' to manage dotfiles git
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Use Python3 vs Python2 when invoking 'python'
+alias python="python3"

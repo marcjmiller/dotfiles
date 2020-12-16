@@ -1,0 +1,63 @@
+# Fix whitespace errors
+[apply]
+	whitespace = fix
+
+[core]
+	# Always exclude files from ~/.gitignore
+	excludesfile = ~/.gitignore
+
+	# Define whitespace errors
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+	# Don't trust Computer local time
+	trustctime = false
+
+	# Cache untracked to speed commands
+	untrackedCache = true
+
+# Use diff-so-fancy
+[pager]
+	diff = "diff-so-fancy | less --tabs=4 -RFX"
+	show = "diff-so-fancy | less --tabs=4 -RFX"
+
+[diff-so-fancy]
+	stripLeadingSymbols = false
+
+# Use colored outputs where able
+[color]
+	ui = auto
+
+# Better diff-so-fancy colors
+[color "diff-highlight"]
+	oldNormal = "red bold"
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+
+[color "diff"]
+	meta = "11"
+	frag = "magenta bold"
+	commit = "yellow bold"
+	old = "red bold"
+	new = "green bold"
+	whitespace = "red reverse"
+	newMoved = "cyan"
+	oldMoved = "blue"
+
+[color "branch"]
+	current = "yellow reverse"
+	local = "yellow"
+	remote = "green"
+
+[color "status"]
+	added = "yellow"
+	changed = "green"
+	untracked = "cyan"
+
+[user]
+	email = marcjmiller@outlook.com
+	name = Marc Miller
+
+# Track renames as copies
+[diff]
+	renames = copies
